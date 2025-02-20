@@ -23,6 +23,11 @@
 
 		public PersonJobBuilder Works => new PersonJobBuilder(person);
 		public PersonAddressBuilder Lives => new PersonAddressBuilder(person);
+
+		public static implicit operator Person(PersonBuilder pb)
+		{
+			return pb.person;
+		}
 	}
 
 	public class PersonAddressBuilder : PersonBuilder
@@ -80,7 +85,7 @@
 		public static void Main(string[] args)
 		{
 			var pb = new PersonBuilder();
-			var person = pb
+			Person person = pb
 				.Works
 					.WorksAt("Fabrikam")
 					.AsA("Engineer")
