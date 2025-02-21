@@ -81,6 +81,8 @@
 				.OfType(CarType.Crossover) // ISpecifyWheelSize
 				.WithWheels(22) // IBuildCar
 				.Build(); // Car
+
+			Console.WriteLine(car);
 		}
 	}
 }
