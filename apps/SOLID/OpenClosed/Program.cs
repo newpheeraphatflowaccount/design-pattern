@@ -8,11 +8,11 @@
 			var tree = new Product("Tree", Color.Green, Size.Large);
 			var house = new Product("House", Color.Blue, Size.Large);
 
-			Product[] products = [
+			Product[] products = {
 				apple,
 				tree,
 				house
-			];
+			};
 
 			var pf = new ProductFilter();
 			Console.WriteLine("Green products (old):");
